@@ -2,14 +2,15 @@ const mongoose=require('mongoose');
 require('dotenv').config();
 
 //define mongoDB connection URL
-//const mongoURL=process.env.MONGODB_URL_LOCAL//hotels is database we created here
+//const mongoURL=process.env.MONGODB_URL_LOCAL      //hotels is database we created here
 const mongoURL=process.env.MONGODB_URL;
 
 //Set Up mongoDB connections
-mongoose.connect(mongoURL,{
-    useNewUrlParser:true,
-    useUnifiedTopology:true
-})
+// mongoose.connect(mongoURL,{
+//     useNewUrlParser:true,
+//     useUnifiedTopology:true
+// })
+mongoose.connect(mongoURL)
 
 //get the default connection
 //mongoose maintains a default connection object representing the mongoDB connection
